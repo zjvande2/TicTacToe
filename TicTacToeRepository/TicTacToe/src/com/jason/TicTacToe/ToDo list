@@ -1,0 +1,9 @@
+
+	Jason Vanderslice
+	Tic Tac Toe program
+
+============================================================================================
+
+	1.) Remove any code that will interfere with the implementation of new code  (Inside the XO button)
+	2.) Make Object Board that reads all the buttons and their current states
+	3.)	Make GameManager that reads and edits the object board
