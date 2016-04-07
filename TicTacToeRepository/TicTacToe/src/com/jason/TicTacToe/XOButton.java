@@ -22,7 +22,7 @@ public class XOButton extends JButton implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		
-		
+		value = GameMaster.getTurn();
 		switch (value) {
 		case 0:
 			

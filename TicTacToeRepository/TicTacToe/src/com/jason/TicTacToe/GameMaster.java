@@ -17,7 +17,7 @@ public class GameMaster
 	{
 		if (turn == 0) {
 			turnNum = 1;
-			return 1;
+			return 2;
 		} else if (turn == 1){
 			turnNum = 2;
 			return 2;
@@ -29,6 +29,6 @@ public class GameMaster
 			return 1;
 		}
 	}
-	public byte getTurn()
+	public static byte getTurn()
 	{ return turnNum; }
 }
