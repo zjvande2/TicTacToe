@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 
 public class XOButton extends JButton implements ActionListener {
 	ImageIcon X, O;
-	byte value = 0;
+	public static byte value = 0;
 	int id;
 	/*
 	 * 0:nothing 1:X 2:O
@@ -22,21 +22,24 @@ public class XOButton extends JButton implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		
-		value++;
-		value %= 3;
+		
 		switch (value) {
 		case 0:
+			
 			//This should never be initiated, if this is set, there is an error
 			setIcon(null);
-			System.out.println(this.id);
+			GameMaster.swtichTurn(value);
+			System.out.println(value);
 			break;
 		case 1:
 			setIcon(X);
-			GameMaster.setBility(false, this.id);
-			System.out.println(this.id);
+			GameMaster.swtichTurn(value);
+			System.out.println(value);
 			break;
 		case 2:
 			setIcon(O);
+			GameMaster.swtichTurn(value);
+			System.out.println(value);
 			break;
 		}
 	}
