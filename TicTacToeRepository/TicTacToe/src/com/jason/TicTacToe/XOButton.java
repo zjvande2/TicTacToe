@@ -19,7 +19,7 @@ public class XOButton extends JButton implements ActionListener {
 		O = new ImageIcon(this.getClass().getResource("O.png"));
 		this.addActionListener(this);
 	}
-
+	
 	public void actionPerformed(ActionEvent e) {
 		
 		value = GameMaster.getTurn();
@@ -28,19 +28,28 @@ public class XOButton extends JButton implements ActionListener {
 			
 			//This should never be initiated, if this is set, there is an error
 			setIcon(null);
+			System.out.println (GameMaster.checkBility(true, this));
 			GameMaster.swtichTurn(value);
 			System.out.println(value);
 			break;
 		case 1:
 			setIcon(X);
 			GameMaster.swtichTurn(value);
+			setTaken(this);
+			System.out.println (GameMaster.checkBility(true, this));
 			System.out.println(value);
 			break;
 		case 2:
 			setIcon(O);
 			GameMaster.swtichTurn(value);
+			
 			System.out.println(value);
 			break;
 		}
+	}
+	public void setTaken(XOButton xoButton)
+	{
+		
+		
 	}
 }

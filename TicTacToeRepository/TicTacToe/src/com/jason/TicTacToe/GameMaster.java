@@ -2,14 +2,16 @@ package com.jason.TicTacToe;
 
 public class GameMaster 
 {
-	private static byte turnNum = 0;
+	private static byte turnNum = 1;
 	
-	public static void setBility(boolean bil, int id)
+	public static boolean checkBility(boolean bil, XOButton xoButton)
 	{
-		if (bil == false)
+		if (xoButton == null)
 		{
-			System.out.println("Button " + id + " is not avaliable to be changed"); 
-			
+		
+			return false;
+		} else {
+			return true;
 		}
 	}
 	
@@ -30,5 +32,7 @@ public class GameMaster
 		}
 	}
 	public static byte getTurn()
-	{ return turnNum; }
+	{ 
+		return turnNum; 
+	}
 }
